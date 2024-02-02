@@ -1,0 +1,12 @@
+name: Build registry
+on:
+  push:
+    branches: [main]
+    tags-ignore: [*]
+    paths: [registry/]
+jobs:
+  publish-image:
+    uses: third-place/actions/.github/workflows/publish-docker-image.yaml@main
+    secrets: inherit
+    with:
+      name: registry
