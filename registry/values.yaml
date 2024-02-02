@@ -1,0 +1,4 @@
+registries:
+  - name: system
+    repository: thirdplace/platform
+    directory: system
