@@ -12,3 +12,4 @@ jobs:
     secrets: inherit
     with:
       name: registry
+      directory: registry
