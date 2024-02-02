@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: registries
-          image: ghcr.io/thirdplace/registry
+          image: {{ .Values.repository }}:{{ .Values.version }}
           env:
             - name: REGISTRIES
               value: {{ .Values.registries | toJson | quote }}
