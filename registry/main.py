@@ -1,4 +1,6 @@
+from os import getenv
+
 if __name__ == "__main__":
-    print(os.getenv("REGISTRIES"))
+    print(getenv("REGISTRIES"))
     while True:
         pass

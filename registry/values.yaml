@@ -1,5 +1,5 @@
+image: ghcr.io/third-place/registry:68097e07479c85b923e2d6b3713ac53e32b01355
 registries:
   - name: system
     repository: thirdplace/platform
     directory: system
-    version: 9fcbdd9df99e4ced780167ddc8b7a4d1a81c4a01
