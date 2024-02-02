@@ -2,7 +2,7 @@ name: Build registry
 on:
   push:
     branches: [main]
-    tags-ignore: [*]
+    tags-ignore: ["**"]
     paths: [registry/]
 jobs:
   publish-image:
