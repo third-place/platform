@@ -8,6 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/cors-allow-origin: "thirdplaceapp.com,localhost:3000"
     nginx.ingress.kubernetes.io/cors-allow-methods: "POST, GET, PUT, OPTIONS"
+  namespace: ingress
 spec:
   tls:
     - hosts:
