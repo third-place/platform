@@ -66,4 +66,5 @@ spec:
   # circumstances. Setting to zero will store no history. This will reduce storage used. Increasing will increase the
   # space used to store the history, so we do not recommend increasing it.
   revisionHistoryLimit: 10
+---
 {{ end }}
