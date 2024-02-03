@@ -1,0 +1,7 @@
+name: ingress
+apiVersion: v2
+version: 0.0.1
+dependencies:
+  - name: nginx
+    version: v1.1.2
+    repository: oci://ghcr.io/nginxinc/charts/nginx-ingress
