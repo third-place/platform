@@ -1,6 +1,7 @@
-services:
-  ingress:
-    repository: platform
-    directory: ingress
-    ref: main
-    description: Ingress
+registry:
+  services:
+    ingress:
+      repository: platform
+      directory: ingress
+      ref: main
+      description: Ingress
