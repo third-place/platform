@@ -3,4 +3,8 @@ hosts:
   consumer: localhost
   api: localhost
   backstage: localhost
-rules: []
+rules:
+  - host: localhost
+    path: /
+    service: hello-world
+    port: 80

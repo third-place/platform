@@ -18,9 +18,19 @@ spec:
         - {{ .Values.hosts.backstage }}
       secretName: thirdplace-com-cert-tls
   {{ end }}
-  rules: []
-{{/*    {{ range $rule := .Values.rules }}*/}}
-{{/*    {{ end }}*/}}
+  rules:
+    {{ range $rule := .Values.rules }}
+    - host: {{ $rule.host }}
+      http:
+        paths:
+          - pathType: Prefix
+            path: {{ $rule.path }}
+            backend:
+              service:
+                name: {{ $rule.service }}
+                port:
+                  number: {{ $rule.port }}
+    {{ end }}
 {{/*    - host: {{ .Values.hosts.backstage }}*/}}
 {{/*      http:*/}}
 {{/*        paths:*/}}
