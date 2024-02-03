@@ -1,0 +1,8 @@
+# helm
+charts/
+
+# jetbrains
+.idea/
+
+# osx
+.DS_Store
