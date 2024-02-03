@@ -4,8 +4,6 @@ kind: AppProject
 metadata:
   name: {{ $service }}
   namespace: argocd
-  labels:
-    argocd.argoproj.io/instance: {{ $service }}
 {{/*  finalizers:*/}}
 {{/*    - resources-finalizer.argocd.argoproj.io*/}}
 spec:
