@@ -5,3 +5,8 @@ registry:
       directory: ingress
       ref: main
       description: Ingress
+    cert-manager:
+      repository: platform
+      directory: cert-manager
+      ref: main
+      description: Let's encrypt cert manager
