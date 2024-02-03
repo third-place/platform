@@ -4,16 +4,12 @@ kind: AppProject
 metadata:
   name: {{ $service }}
   namespace: argocd
-{{/*  finalizers:*/}}
-{{/*    - resources-finalizer.argocd.argoproj.io*/}}
 spec:
   description: {{ $def.description }}
 
   sourceRepos:
     - 'https://github.com/third-place/{{ $def.repository }}.git'
 
-  # Only permit applications to deploy to the guestbook namespace in the same cluster
-  # Destination clusters can be identified by 'server', 'name', or both.
   destinations:
     - namespace: {{ $service }}
       server: https://kubernetes.default.svc
