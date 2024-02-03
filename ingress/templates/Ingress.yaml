@@ -18,9 +18,9 @@ spec:
         - {{ .Values.hosts.backstage }}
       secretName: thirdplace-com-cert-tls
   {{ end }}
-  rules:
-    {{ range $rule := .Values.rules }}
-    {{ end }}
+  rules: []
+{{/*    {{ range $rule := .Values.rules }}*/}}
+{{/*    {{ end }}*/}}
 {{/*    - host: {{ .Values.hosts.backstage }}*/}}
 {{/*      http:*/}}
 {{/*        paths:*/}}
