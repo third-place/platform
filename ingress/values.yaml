@@ -1,0 +1,5 @@
+useTls: false
+hosts:
+  consumer: localhost:3000
+  api: localhost:3001
+  backstage: localhost:3002

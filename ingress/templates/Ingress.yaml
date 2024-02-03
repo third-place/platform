@@ -10,14 +10,16 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-methods: "POST, GET, PUT, OPTIONS"
   namespace: ingress
 spec:
+  {{ if .Values.useTls }}
   tls:
     - hosts:
-        - thirdplaceapp.com
-        - api.thirdplaceapp.com
-        - backstage.thirdplaceapp.com
+        - {{ .Values.hosts.consumer }}
+        - {{ .Values.hosts.api }}
+        - {{ .Values.hosts.backstage }}
       secretName: thirdplace-com-cert-tls
+  {{ end }}
   rules:
-    - host: backstage.thirdplaceapp.com
+    - host: {{ .Values.hosts.backstage }}
       http:
         paths:
           - pathType: Prefix
@@ -27,7 +29,7 @@ spec:
                 name: backstage
                 port:
                   number: 7007
-    - host: thirdplaceapp.com
+    - host: {{ .Values.hosts.consumer }}
       http:
         paths:
           - pathType: Prefix
@@ -37,7 +39,7 @@ spec:
                 name: ui
                 port:
                   number: 3000
-    - host: api.thirdplaceapp.com
+    - host: {{ .Values.hosts.api }}
       http:
         paths:
           - pathType: Prefix
