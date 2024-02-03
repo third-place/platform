@@ -24,6 +24,10 @@ spec:
     - group: ''
       kind: Namespace
     {{ end }}
+    {{- if (equals $service "cert-manager")}}
+    - group: ''
+      kind: ClusterIssuer
+    {{ end }}
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
