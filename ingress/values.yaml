@@ -3,3 +3,4 @@ hosts:
   consumer: localhost
   api: localhost
   backstage: localhost
+rules: []
