@@ -25,7 +25,7 @@ spec:
       kind: Namespace
     {{ end }}
     {{- if (eq $service "cert-manager")}}
-    - group: ''
+    - group: '*'
       kind: ClusterIssuer
     {{ end }}
 
