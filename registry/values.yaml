@@ -1,5 +1,7 @@
-image: ghcr.io/third-place/registry:68097e07479c85b923e2d6b3713ac53e32b01355
-registries:
-  - name: system
-    repository: thirdplace/platform
+services:
+  system:
+    repository: platform
     directory: system
+    ref: main
+    description: Main platform dependencies
+    hasSubcomponents: true
