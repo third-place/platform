@@ -1,7 +1,1 @@
-services:
-  system:
-    repository: platform
-    directory: system
-    ref: main
-    description: Main platform dependencies
-    hasSubcomponents: true
+services: []
