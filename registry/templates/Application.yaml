@@ -1,4 +1,3 @@
-{{ $versions := .Values.versions }}
 {{ range $service, $def := .Values.services }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -23,10 +22,6 @@ spec:
         {{ if ne $def.hasSubcomponents true }}
         - versions.yaml
         {{ end }}
-
-      # Values file as block file. Prefer to use valuesObject if possible (see below)
-      values: |
-        {{ $versions | toYaml }}
 
     # kustomize specific config
     kustomize:
