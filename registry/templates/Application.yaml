@@ -19,6 +19,7 @@ spec:
       # The path is relative to the spec.source.path directory defined above
       valueFiles:
         - values.yaml
+        - versions.yaml
 
       # Ignore locally missing valueFiles when installing Helm chart. Defaults to false
       ignoreMissingValueFiles: false
