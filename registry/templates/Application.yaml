@@ -20,7 +20,7 @@ spec:
       # The path is relative to the spec.source.path directory defined above
       valueFiles:
         - values.yaml
-        {{ if ne $def.hasSubcomponents }}
+        {{ if ne $def.hasSubcomponents true }}
         - versions.yaml
         {{ end }}
 
