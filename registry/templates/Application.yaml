@@ -20,7 +20,9 @@ spec:
       # The path is relative to the spec.source.path directory defined above
       valueFiles:
         - values.yaml
+        {{ if ne $def.hasSubcomponents }}
         - versions.yaml
+        {{ end }}
 
       # Values file as block file. Prefer to use valuesObject if possible (see below)
       values: |
