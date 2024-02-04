@@ -1,1 +1,6 @@
-services: []
+services:
+  backstage:
+    repository: backstage
+    directory: chart
+    ref: main
+    description: Backstage

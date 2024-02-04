@@ -1,3 +1,4 @@
+{{ $helmValues := .Files.Get "versions.yaml" }}
 {{ range $service, $def := .Values.services }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -19,9 +20,9 @@ spec:
       # The path is relative to the spec.source.path directory defined above
       valueFiles:
         - values.yaml
-        {{ if ne $def.hasSubcomponents true }}
-        - versions.yaml
-        {{ end }}
+
+      values: |
+        {{ $helmValues | nindent 8 }}
 
     # kustomize specific config
     kustomize:
