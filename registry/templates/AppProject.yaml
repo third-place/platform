@@ -9,7 +9,7 @@ spec:
 
   sourceRepos:
     - https://github.com/third-place/{{ $def.repository }}.git
-    - ghcr.io/third-place/service
+    - *
 
   destinations:
     - namespace: {{ $service }}
