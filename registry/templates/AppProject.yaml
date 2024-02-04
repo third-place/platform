@@ -8,7 +8,8 @@ spec:
   description: {{ $def.description }}
 
   sourceRepos:
-    - 'https://github.com/third-place/{{ $def.repository }}.git'
+    - https://github.com/third-place/{{ $def.repository }}.git
+    - ghcr.io/third-place
 
   destinations:
     - namespace: {{ $service }}
