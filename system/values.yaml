@@ -5,3 +5,9 @@ registry:
       directory: cert-manager
       ref: main
       description: Let's encrypt cert manager
+    applications:
+      repository: platform
+      directory: applications
+      ref: main
+      description: Services that make up the application
+      hasSubcomponents: true

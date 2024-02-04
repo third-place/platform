@@ -5,9 +5,3 @@ services:
     ref: main
     description: Main platform dependencies
     hasSubcomponents: true
-  applications:
-    repository: platform
-    directory: applications
-    ref: main
-    description: Services that make up the application
-    hasSubcomponents: true
