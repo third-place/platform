@@ -1,2 +1,3 @@
 versions:
-  backstage: v0.1.13
+  backstage:
+    version: v0.1.13

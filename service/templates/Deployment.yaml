@@ -2,7 +2,7 @@
 {{ $name := .Values.name }}
 {{ range $service, $version := .Values.versions }}
 {{ if eq $name $service }}
-{{ $serviceVersion = $version }}
+{{ $serviceVersion = $version.version }}
 {{ end }}
 {{ end }}
 apiVersion: apps/v1
