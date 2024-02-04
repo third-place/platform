@@ -1,3 +1,4 @@
+{{ $versions := .Values.versions }}
 {{ range $service, $def := .Values.services }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -21,14 +22,9 @@ spec:
         - values.yaml
         - versions.yaml
 
-      # Ignore locally missing valueFiles when installing Helm chart. Defaults to false
-      ignoreMissingValueFiles: false
-
       # Values file as block file. Prefer to use valuesObject if possible (see below)
-      values:
-
-      # Values file as block file. This takes precedence over values
-      valuesObject:
+      values: |
+        {{ $versions | toYaml }}
 
     # kustomize specific config
     kustomize:
