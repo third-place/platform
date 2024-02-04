@@ -1,4 +1,4 @@
-{{ if .Values.selfSigned }}
+{{ if (and .Values.enabled .Values.selfSigned) }}
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
