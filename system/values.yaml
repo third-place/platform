@@ -1,10 +1,10 @@
 registry:
   services:
-    cert-manager:
-      repository: platform
-      directory: cert-manager
-      ref: main
-      description: Let's encrypt cert manager
+#    cert-manager:
+#      repository: platform
+#      directory: cert-manager
+#      ref: main
+#      description: Let's encrypt cert manager
     applications:
       repository: platform
       directory: applications
