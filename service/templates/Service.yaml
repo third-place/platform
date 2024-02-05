@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.name }}
 spec:
   selector:
-    app.kubernetes.io/name: {{ .Values.name }}
+    app: {{ .Values.name }}
   type: ClusterIP
   ports:
     - name: http

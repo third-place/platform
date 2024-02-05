@@ -9,6 +9,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.name }}
+  labels:
+    app: {{ .Values.name }}
 spec:
   selector:
     matchLabels:
@@ -17,7 +19,6 @@ spec:
     metadata:
       labels:
         app: {{ .Values.name }}
-        hello: {{ .Values.hello }}
     spec:
       containers:
         - name: {{ .Values.name }}
