@@ -22,7 +22,6 @@ spec:
         - values.yaml
 
       valuesObject:
-        hello: world
         {{ $helmValues | nindent 8 }}
 
     # kustomize specific config
