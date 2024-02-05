@@ -1,3 +1,4 @@
-versions:
-  backstage:
-    version: v0.1.13
+global:
+  versions:
+    backstage:
+      version: v0.1.13
