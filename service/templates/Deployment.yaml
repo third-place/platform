@@ -1,6 +1,6 @@
 {{ $serviceVersion := "" }}
 {{ $name := .Values.name }}
-{{ range $service, $version := .Values.global.versions }}
+{{ range $service, $version := .Values.versions }}
 {{ if eq $name $service }}
 {{ $serviceVersion = $version.version }}
 {{ end }}
@@ -17,6 +17,7 @@ spec:
     metadata:
       labels:
         app: {{ .Values.name }}
+        hello: {{ .Values.hello }}
     spec:
       containers:
         - name: {{ .Values.name }}
