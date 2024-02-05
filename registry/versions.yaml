@@ -1,5 +1,4 @@
 global:
-  hello: world
   versions:
     backstage:
       version: v0.1.13
