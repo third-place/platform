@@ -1,6 +1,6 @@
 global:
   versions:
     backstage:
-      version: fe849c508df961a1d27dd486a3d695db84dfbc07
+      version: 421fbc91c05cc074a0c4f385abcadd0df7acc3c1
     user-service:
       version: v0.1.28
