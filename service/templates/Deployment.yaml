@@ -1,5 +1,6 @@
 {{ $serviceVersion := "0.0.0" }}
 {{ $name := .Release.Name }}
+{{ $secrets := .Values.secrets }}
 {{ range $service, $version := .Values.global.versions }}
 {{ if eq $name $service }}
 {{ $serviceVersion = $version.version }}
@@ -26,4 +27,14 @@ spec:
             - containerPort: {{ .Values.targetPort }}
               name: http
               protocol: TCP
+          env:
+            {{- if $secrets }}
+            {{- range $key, $_ := $secrets }}
+            - name: {{ $key }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ kebabcase $key }}
+                  key: secretValue
+            {{- end }}
+            {{- end }}
 
