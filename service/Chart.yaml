@@ -1,4 +1,8 @@
 name: service
 apiVersion: v2
-version: 0.0.16
-dependencies: []
+version: 0.0.17
+dependencies:
+  - name: postgresql
+    version: 14.0.1
+    repository: https://charts.bitnami.com/bitnami
+    condition: postgres.enabled
