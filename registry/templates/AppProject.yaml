@@ -25,9 +25,17 @@ spec:
     - group: ''
       kind: Namespace
     {{ end }}
-    {{- if (eq $service "cert-manager")}}
-    - group: '*'
+    {{- if (eq $service "cert-manager") }}
+    - group: ''
       kind: ClusterIssuer
+    {{ end }}
+    {{- if (eq $service "sealed-secrets") }}
+    - group: ''
+      kind: ClusterRole
+    - group: ''
+      kind: ClusterRoleBinding
+    - group: ''
+      kind: CustomResourceDefinition
     {{ end }}
 
   # Enables namespace orphaned resource monitoring.
