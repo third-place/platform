@@ -5,3 +5,8 @@ registry:
       directory: chart
       ref: main
       description: Backstage
+    user-service:
+      repository: user-service
+      directory: chart
+      ref: main
+      description: User service
