@@ -30,11 +30,11 @@ spec:
       kind: ClusterIssuer
     {{ end }}
     {{- if (eq $service "sealed-secrets") }}
-    - group: ''
+    - group: 'apps'
       kind: ClusterRole
-    - group: ''
+    - group: 'apps'
       kind: ClusterRoleBinding
-    - group: ''
+    - group: 'apps'
       kind: CustomResourceDefinition
     {{ end }}
 
