@@ -1,5 +1,5 @@
 {{ $serviceVersion := "" }}
-{{ $name := .Values.name }}
+{{ $name := .Release.name }}
 {{ range $service, $version := .Values.global.versions }}
 {{ if eq $name $service }}
 {{ $serviceVersion = $version.version }}
@@ -8,21 +8,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.name }}
-  labels:
-    app: {{ .Values.name }}
+  name: {{ .Release.name }}
 spec:
   selector:
     matchLabels:
-      app: {{ .Values.name }}
+      app: {{ .Release.name }}
   template:
     metadata:
       labels:
-        app: {{ .Values.name }}
+        app: {{ .Release.name }}
     spec:
       containers:
-        - name: {{ .Values.name }}
-          image: ghcr.io/third-place/{{ .Values.name }}:{{ $serviceVersion }}
+        - name: {{ .Release.name }}
+          image: ghcr.io/third-place/{{ .Release.name }}:{{ $serviceVersion }}
           imagePullPolicy: Always
           ports:
             - containerPort: {{ .Values.targetPort }}
