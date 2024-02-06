@@ -5,6 +5,11 @@ registry:
 #      directory: cert-manager
 #      ref: main
 #      description: Let's encrypt cert manager
+    sealed-secrets:
+      repository: platform
+      directory: sealed-secrets
+      ref: main
+      description: Sealed secrets
     applications:
       repository: platform
       directory: applications
