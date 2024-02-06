@@ -2,3 +2,5 @@ provisioning:
   enabled: true
   topics:
     - users
+kraft:
+  enabled: true
