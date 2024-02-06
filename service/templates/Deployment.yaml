@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: {{ .Release.Name }}
-          image: ghcr.io/third-place/{{ .Release.name }}:{{ $serviceVersion }}
+          image: ghcr.io/third-place/{{ $name }}:{{ $serviceVersion }}
           imagePullPolicy: Always
           ports:
             - containerPort: {{ .Values.targetPort }}
