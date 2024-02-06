@@ -1,7 +1,7 @@
 port:
 targetPort:
 secrets: []
-postgres:
+postgresql:
   enabled: false
   auth:
     username:
