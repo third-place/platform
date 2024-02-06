@@ -2,3 +2,5 @@ global:
   versions:
     backstage:
       version: fe849c508df961a1d27dd486a3d695db84dfbc07
+    user-service:
+      version: v0.1.28
