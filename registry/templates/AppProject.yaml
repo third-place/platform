@@ -37,6 +37,14 @@ spec:
     - group: '*'
       kind: CustomResourceDefinition
     {{ end }}
+    {{- if (eq $service "kafka") }}
+    - group: '*'
+      kind: CustomResourceDefinition
+    - group: '*'
+      kind: ClusterRole
+    - group: '*'
+      kind: ClusterRoleBinding
+    {{ end }}
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
