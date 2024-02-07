@@ -1,10 +1,11 @@
-provisioning:
-  enabled: true
-  topics:
-    - users
+kafka:
+  provisioning:
+    enabled: true
+    topics:
+      - users
 
-kraft:
-  enabled: true
+  kraft:
+    enabled: true
 
-controller:
-  replicaCount: 1
+  controller:
+    replicaCount: 1
