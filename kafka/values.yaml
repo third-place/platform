@@ -2,6 +2,9 @@ provisioning:
   enabled: true
   topics:
     - users
+
 kraft:
   enabled: true
-  clusterId: kafka-platform
+
+controller:
+  replicaCount: 1
