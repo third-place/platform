@@ -21,7 +21,7 @@ spec:
       valueFiles:
         - values.yaml
 
-      valuesObject:
+      values: |
         {{ $helmValues | nindent 8 }}
 
     # kustomize specific config
