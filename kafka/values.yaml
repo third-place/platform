@@ -1,3 +1,4 @@
 clusterName: thirdplace-kafka
 topics:
   - users
+  - images
