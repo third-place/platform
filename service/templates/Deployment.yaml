@@ -2,6 +2,7 @@
 {{ $serviceVersion := "0.0.0" }}
 {{ $name := .Release.Name }}
 {{ $secrets := .Values.secrets }}
+{{ $env := .Values.env }}
 {{ range $service, $version := .Values.global.versions }}
 {{ if eq $name $service }}
 {{ $serviceVersion = $version.version }}
@@ -36,6 +37,12 @@ spec:
                 secretKeyRef:
                   name: {{ kebabcase $key }}
                   key: secretValue
+            {{- end }}
+            {{- end }}
+            {{- if $env }}
+            {{- range $key, $value := env }}
+            - name: {{ $key }}
+              value: {{ $value }}
             {{- end }}
             {{- end }}
 {{ end }}
