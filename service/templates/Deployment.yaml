@@ -42,7 +42,7 @@ spec:
             {{- if $env }}
             {{- range $key, $value := $env }}
             - name: {{ $key }}
-              value: {{ $value }}
+              value: {{ quote $value }}
             {{- end }}
             {{- end }}
 {{ end }}
