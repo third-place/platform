@@ -7,5 +7,7 @@ postgresql:
   auth:
     username:
     database:
-    existingSecret:
+    password:
+  pg-user-secret:
+    password:
 env: []
