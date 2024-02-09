@@ -40,7 +40,7 @@ spec:
             {{- end }}
             {{- end }}
             {{- if $env }}
-            {{- range $key, $value := env }}
+            {{- range $key, $value := $env }}
             - name: {{ $key }}
               value: {{ $value }}
             {{- end }}
