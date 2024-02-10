@@ -1,3 +1,4 @@
+{{- if .Values.postgresql.enabled }}
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -86,7 +87,7 @@ spec:
       securityContext:
         fsGroup: 1001
         fsGroupChangePolicy: Always
-      serviceAccountName: user-service-postgresql
+      serviceAccountName: {{ .Release.Name }}-postgresql
       terminationGracePeriodSeconds: 30
   updateStrategy:
     rollingUpdate:
@@ -104,3 +105,4 @@ spec:
           requests:
             storage: 8Gi
         volumeMode: Filesystem
+{{- end }}
