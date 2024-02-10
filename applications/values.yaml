@@ -10,3 +10,8 @@ registry:
       directory: chart
       ref: main
       description: User service
+    image-service:
+      repository: image-service
+      directory: chart
+      ref: main
+      description: Image service
