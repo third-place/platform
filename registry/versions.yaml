@@ -5,4 +5,4 @@ global:
     user-service:
       version: 6f0d6b8e23f902b1e93c6c8cbb379c476ae2a685
     image-service:
-      version: ab606aa32e0a27a8c4c6e8b8fb280c12725d8b27
+      version: 134c64c86c8a39d11787a10f734af1506dda97aa
