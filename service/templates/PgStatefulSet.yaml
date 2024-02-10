@@ -43,7 +43,7 @@ spec:
       containers:
         - env:
             - name: PGDATA
-              value: /mnt/postgresql/data
+              value: /var/lib/postgresql/data/pgdata
             - name: POSTGRES_USER
               value: {{ .Values.postgresql.auth.username }}
             - name: POSTGRES_PASSWORD
@@ -78,7 +78,7 @@ spec:
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           volumeMounts:
-            - mountPath: /mnt/postgresql/data
+            - mountPath: /var/lib/postgresql/data
               name: data
       dnsPolicy: ClusterFirst
       restartPolicy: Always
