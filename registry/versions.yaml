@@ -3,4 +3,4 @@ global:
     backstage:
       version: 421fbc91c05cc074a0c4f385abcadd0df7acc3c1
     user-service:
-      version: 4dc47509b8f933bf5bc5ce529b9e7a89fe259f73
+      version: ae02ee443110bd52b71c4d088a6d74f1134713bc
