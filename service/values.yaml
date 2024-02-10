@@ -5,8 +5,6 @@ enabled: true
 postgresql:
   enabled: false
   auth:
-    existingSecret: pg-user-secret
     username:
     database:
-    secretPassword:
 env: []
