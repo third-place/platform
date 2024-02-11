@@ -20,3 +20,8 @@ registry:
       directory: chart
       ref: main
       description: Community service
+    notification-service:
+      repository: notification-service
+      directory: chart
+      ref: main
+      description: Notification service
