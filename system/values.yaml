@@ -5,6 +5,11 @@ registry:
 #      directory: cert-manager
 #      ref: main
 #      description: Let's encrypt cert manager
+    ingress:
+      repository: platform
+      directory: ingress
+      ref: main
+      description: Nginx ingress
     sealed-secrets:
       repository: platform
       directory: sealed-secrets
