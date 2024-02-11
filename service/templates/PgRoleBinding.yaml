@@ -9,5 +9,5 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 subjects:
   - kind: ServiceAccount
-    name: {{ .Release.Name }}-sa
+    name: {{ .Release.Name }}-postgresql
     namespace: {{ .Release.Name }}
