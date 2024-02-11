@@ -15,4 +15,4 @@ spec:
       port: 5432
       targetPort: tcp-postgresql
   selector:
-    app: {{ .Release.Name}}-postgresql
+    app.kubernetes.io/component: primary
