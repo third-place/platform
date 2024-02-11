@@ -5,6 +5,11 @@ registry:
 #      directory: cert-manager
 #      ref: main
 #      description: Let's encrypt cert manager
+    metallb:
+      repository: platform
+      directory: metallb
+      ref: main
+      description: Metallb
     ingress:
       repository: platform
       directory: ingress
