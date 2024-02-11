@@ -3,6 +3,6 @@ global:
     backstage:
       version: 421fbc91c05cc074a0c4f385abcadd0df7acc3c1
     user-service:
-      version: 1f47aa1ab31b07ad79e2cfe99aa1745395647fa0
+      version: 3467868f5c84779f80a9524936f5c0e63dee4ac2
     image-service:
       version: b2c6fe48fce816946875faee21a7623fe32e32b1
