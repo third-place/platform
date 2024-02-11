@@ -8,3 +8,5 @@ global:
       version: 051fca31d2dbf6df4f58bf166b9e511883bda788
     community-service:
       version: 7ee9c1197f3fa1eaf5668346f08363727c2bceab
+    notification-service:
+      version: 0755df48bef44364bf827bca60d52da85da1b491
