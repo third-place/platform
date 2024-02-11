@@ -7,4 +7,4 @@ global:
     image-service:
       version: 8e150635e32cfa9ba68cd746d8618ecc1368f681
     community-service:
-      version: 79c58811b8b01e52ae47240e78cfdde19c262f69
+      version: 494187267001c42c1c10d28c39a5ee4b8c935cc8
