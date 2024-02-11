@@ -45,6 +45,16 @@ spec:
     - group: '*'
       kind: ClusterRoleBinding
     {{ end }}
+    {{- if (eq $service "ingress") }}
+    - group: '*'
+      kind: ValidatingWebhookConfiguration
+    - group: '*'
+      kind: IngressClass
+    - group: '*'
+      kind: ClusterRoleBinding
+    - group: '*'
+      kind: ClusterRole
+    {{- end }}
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
