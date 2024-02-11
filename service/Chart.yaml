@@ -1,4 +1,4 @@
 name: service
 apiVersion: v2
-version: 0.0.35
+version: 0.0.36
 dependencies: []
