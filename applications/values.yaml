@@ -25,3 +25,8 @@ registry:
       directory: chart
       ref: main
       description: Notification service
+    web-ui:
+      repository: web-ui
+      directory: chart
+      ref: main
+      description: Web UI
