@@ -1,3 +1,4 @@
+{{- if .Values.postgresql.enabled }}
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -11,3 +12,4 @@ subjects:
   - kind: ServiceAccount
     name: {{ .Release.Name }}-postgresql
     namespace: {{ .Release.Name }}
+{{- end }}
