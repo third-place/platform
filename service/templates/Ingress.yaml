@@ -1,7 +1,8 @@
+{{- if .Values.isPublic }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-nginx
+  name: {{ .Release.Name }}-ingress
 spec:
   ingressClassName: nginx
   rules:
@@ -11,6 +12,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: web-ui.web-ui
+                name: {{ .Release.Name }}.{{ .Release.Name }}
                 port:
-                  number: 3000
+                  number: {{ .Values.targetPort }}
+{{- end }}
