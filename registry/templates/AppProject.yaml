@@ -55,6 +55,16 @@ spec:
     - group: '*'
       kind: ClusterRole
     {{- end }}
+    {{- if (eq $service "metallb") }}
+    - group: '*'
+      kind: CustomResourceDefinition
+    - group: '*'
+      kind: ClusterRole
+    - group: '*'
+      kind: ClusterRoleBinding
+    - group: '*'
+      kind: ValidatingWebhookConfiguration
+    {{- end }}
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
