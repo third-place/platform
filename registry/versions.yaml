@@ -6,3 +6,5 @@ global:
       version: b07f5dfabf178f13215b4802a4323953c49414cc
     image-service:
       version: b1de3f721d3637931a3ec2f20c7ae45c727cb32e
+    community-service:
+      version: 0
