@@ -10,3 +10,5 @@ global:
       version: 55b9b485cd594052fd5b679ea81cc4d084b7edaa
     notification-service:
       version: 12c7959aca7fa6da0dff186d307312a5bf17a6e0
+    web-ui:
+      version: 0
