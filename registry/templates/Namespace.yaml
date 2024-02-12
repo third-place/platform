@@ -3,5 +3,9 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: {{ $service }}
+  {{- if $def.namespace.labels }}
+  labels:
+    {{ toYaml $def.namespace.labels | nindent 4 }}
+  {{- end }}
 ---
 {{ end }}
