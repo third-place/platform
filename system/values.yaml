@@ -5,21 +5,21 @@ registry:
 #      directory: cert-manager
 #      ref: main
 #      description: Let's encrypt cert manager
-    metallb:
-      repository: platform
-      directory: metallb
-      ref: main
-      description: Metallb
-      namespace:
-        labels:
-          pod-security.kubernetes.io/enforce: privileged
-          pod-security.kubernetes.io/audit: privileged
-          pod-security.kubernetes.io/warn: privileged
-    ingress:
-      repository: platform
-      directory: ingress
-      ref: main
-      description: Nginx ingress
+#    metallb:
+#      repository: platform
+#      directory: metallb
+#      ref: main
+#      description: Metallb
+#      namespace:
+#        labels:
+#          pod-security.kubernetes.io/enforce: privileged
+#          pod-security.kubernetes.io/audit: privileged
+#          pod-security.kubernetes.io/warn: privileged
+#    ingress:
+#      repository: platform
+#      directory: ingress
+#      ref: main
+#      description: Nginx ingress
     sealed-secrets:
       repository: platform
       directory: sealed-secrets
