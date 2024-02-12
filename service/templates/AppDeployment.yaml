@@ -30,6 +30,8 @@ spec:
               name: http
               protocol: TCP
           env:
+            - name: SERVICE_PORT
+              value: {{ quote .Values.targetPort }}
             {{- if $secrets }}
             {{- range $key, $_ := $secrets }}
             - name: {{ $key }}
