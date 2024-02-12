@@ -6,11 +6,7 @@ metadata:
 spec:
   selector:
     app: {{ .Release.Name }}
-  {{- if .Values.isPublic }}
-  type: LoadBalancer
-  {{- else }}
   type: ClusterIP
-  {{- end }}
   ports:
     - name: http
       port: {{ .Values.port }}

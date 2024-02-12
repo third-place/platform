@@ -8,4 +8,3 @@ postgresql:
     username:
     database:
 env: []
-isPublic: false
