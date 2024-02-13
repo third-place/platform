@@ -9,6 +9,6 @@ global:
     community-service:
       version: 70ae81b559412e2eadeea961f94493e4b98f81ab
     notification-service:
-      version: c79de58e2fee1dc6552b2ec9bfbbd5923a63d645
+      version: e1b7ecacf0061ecbc795dd111f384dfc077248fb
     web-ui:
       version: 878eaeb438ee6302da9af29cf964e668ba9c75a3
