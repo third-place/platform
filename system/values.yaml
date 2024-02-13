@@ -30,9 +30,9 @@ registry:
       directory: kafka
       ref: main
       description: Kafka
-#    applications:
-#      repository: platform
-#      directory: applications
-#      ref: main
-#      description: Services that make up the application
-#      hasSubcomponents: true
+    applications:
+      repository: platform
+      directory: applications
+      ref: main
+      description: Services that make up the application
+      hasSubcomponents: true
