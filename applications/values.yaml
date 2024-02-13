@@ -10,16 +10,16 @@ registry:
       directory: chart
       ref: main
       description: User service
+    community-service:
+      repository: community-service
+      directory: chart
+      ref: main
+      description: Community service
 #    image-service:
 #      repository: image-service
 #      directory: chart
 #      ref: main
 #      description: Image service
-#    community-service:
-#      repository: community-service
-#      directory: chart
-#      ref: main
-#      description: Community service
 #    notification-service:
 #      repository: notification-service
 #      directory: chart
