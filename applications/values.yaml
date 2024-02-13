@@ -15,11 +15,11 @@ registry:
       directory: chart
       ref: main
       description: Community service
-#    image-service:
-#      repository: image-service
-#      directory: chart
-#      ref: main
-#      description: Image service
+    image-service:
+      repository: image-service
+      directory: chart
+      ref: main
+      description: Image service
 #    notification-service:
 #      repository: notification-service
 #      directory: chart
