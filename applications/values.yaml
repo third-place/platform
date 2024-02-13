@@ -20,11 +20,11 @@ registry:
       directory: chart
       ref: main
       description: Image service
-#    notification-service:
-#      repository: notification-service
-#      directory: chart
-#      ref: main
-#      description: Notification service
+    notification-service:
+      repository: notification-service
+      directory: chart
+      ref: main
+      description: Notification service
     web-ui:
       repository: web-ui
       directory: chart
