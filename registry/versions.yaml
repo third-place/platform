@@ -7,7 +7,7 @@ global:
     image-service:
       version: 01ea16f9661e340a345285a6e91e4e91e130d22a
     community-service:
-      version: 70ae81b559412e2eadeea961f94493e4b98f81ab
+      version: cbac3c8228cf2655e8cb556d25fed850448e0878
     notification-service:
       version: e1b7ecacf0061ecbc795dd111f384dfc077248fb
     web-ui:
