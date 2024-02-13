@@ -1,17 +1,23 @@
-{{- if .Values.isPublic }}
+{{ $releaseName := .Release.Name }}
+{{ $targetPort := .Values.targetPort }}
+{{- if .Values.ingress.enabled }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Release.Name }}-ingress
+  name: {{ $releaseName }}-ingress
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
     - http:
         paths:
-          - path: /
+          {{- range $path := .Values.ingress.paths }}
+          - path: {{ $path }}
             pathType: Prefix
             backend:
               service:
-                name: {{ .Release.Name }}
+                name: {{ $releaseName }}
                 port:
-                  number: {{ .Values.targetPort }}
+                  number: {{ $targetPort }}
+          {{- end }}
 {{- end }}

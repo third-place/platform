@@ -8,3 +8,6 @@ postgresql:
     username:
     database:
 env: []
+ingress:
+  enabled: false
+  paths: []
