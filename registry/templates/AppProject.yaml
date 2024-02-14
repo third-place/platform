@@ -9,7 +9,6 @@ spec:
 
   sourceRepos:
     - https://github.com/third-place/{{ $def.repository }}.git
-    - https://c8n.io/chartrepo/third-place
 
   destinations:
     - namespace: {{ $service }}
