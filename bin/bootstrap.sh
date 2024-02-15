@@ -1,6 +1,6 @@
 set -e
 
-k3d cluster create -p "9000:80@loadbalancer" --agents 2
+k3d cluster create -p "9000-9064:9000-9064@loadbalancer" --agents 2
 
 helm repo add argocd https://argoproj.github.io/argo-helm
 helm dependency update argocd
