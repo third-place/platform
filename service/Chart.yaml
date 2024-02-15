@@ -1,4 +1,8 @@
 name: service
 apiVersion: v2
-version: 0.0.54
-dependencies: []
+version: 0.0.55
+dependencies:
+  - name: postgres
+    version: 0.0.1
+    repository: file://../postgres
+    condition: postgres.enabled == true

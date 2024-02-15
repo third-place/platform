@@ -1,20 +1,18 @@
-{{- if .Values.postgresql.enabled }}
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}-postgresql
+  name: {{ .Release.Name }}-postgres
   namespace: {{ .Release.Name }}
   labels:
-    app: {{ .Release.Name}}-postgresql
+    app: {{ .Release.Name}}-postgres
     service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
 spec:
   type: ClusterIP
   clusterIP: None
   publishNotReadyAddresses: true
   ports:
-    - name: tcp-postgresql
+    - name: tcp-postgres
       port: 5432
-      targetPort: tcp-postgresql
+      targetPort: tcp-postgres
   selector:
     app.kubernetes.io/component: primary
-{{- end }}

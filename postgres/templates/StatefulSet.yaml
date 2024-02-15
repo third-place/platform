@@ -1,8 +1,7 @@
-{{- if .Values.postgresql.enabled }}
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ .Release.Name }}-postgresql
+  name: {{ .Release.Name }}-postgres
   namespace: {{ .Release.Name }}
   labels:
     app.kubernetes.io/component: primary
@@ -20,14 +19,14 @@ spec:
       app.kubernetes.io/component: primary
       app.kubernetes.io/instance: {{ .Release.Name }}
       app.kubernetes.io/name: postgresql
-  serviceName: {{ .Release.Name }}-postgresql-hl
+  serviceName: {{ .Release.Name }}-postgres-hl
   template:
     metadata:
       labels:
         app.kubernetes.io/component: primary
         app.kubernetes.io/instance: {{ .Release.Name }}
         app.kubernetes.io/name: postgresql
-      name: {{ .Release.Name }}-postgresql
+      name: {{ .Release.Name }}-postgres
     spec:
       affinity:
         podAntiAffinity:
@@ -46,20 +45,20 @@ spec:
             - name: PGDATA
               value: /var/lib/postgresql/data/pgdata
             - name: POSTGRES_USER
-              value: {{ .Values.postgresql.auth.username }}
+              value: {{ .Values.auth.username }}
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
                   key: secretValue
                   name: postgres-password
             - name: POSTGRES_DB
-              value: {{ .Values.postgresql.auth.database }}
+              value: {{ .Values.auth.database }}
           image: postgres:16
           imagePullPolicy: IfNotPresent
           name: postgresql
           ports:
             - containerPort: 5432
-              name: tcp-postgresql
+              name: tcp-postgres
               protocol: TCP
           resources:
             requests:
@@ -87,7 +86,7 @@ spec:
       securityContext:
         fsGroup: 1001
         fsGroupChangePolicy: Always
-      serviceAccountName: {{ .Release.Name }}-postgresql
+      serviceAccountName: {{ .Release.Name }}-postgres
       terminationGracePeriodSeconds: 30
   updateStrategy:
     rollingUpdate:
@@ -105,4 +104,3 @@ spec:
           requests:
             storage: 8Gi
         volumeMode: Filesystem
-{{- end }}

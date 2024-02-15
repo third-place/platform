@@ -1,13 +1,13 @@
 port:
 targetPort:
-secrets: []
+secrets:
 enabled: true
-postgresql:
+postgres:
   enabled: false
   auth:
     username:
     database:
-env: []
+env:
 ingress:
   enabled: false
   paths: []
