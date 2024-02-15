@@ -62,8 +62,8 @@ spec:
               protocol: TCP
           resources:
             requests:
-              cpu: 250m
-              memory: 256Mi
+              cpu: {{ .Values.requests.cpu }}
+              memory: {{ .Values.requests.memory }}
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
@@ -102,5 +102,5 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 8Gi
+            storage: {{ .Values.volume.storage }}
         volumeMode: Filesystem
