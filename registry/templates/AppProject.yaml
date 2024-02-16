@@ -8,7 +8,7 @@ spec:
   description: {{ $def.description }}
 
   sourceRepos:
-    - https://github.com/third-place/{{ $def.repository }}.git
+    - '*'
 
   destinations:
     - namespace: {{ $service }}
