@@ -5,7 +5,7 @@ global:
     user-service:
       version: 159ab776214147a2ec1884fd7251792864fe6a51
     image-service:
-      version: 3d04c8d90acb210bfea7d5f62fb1fb50e2391ac6
+      version: 48e4f3c85197ef2ff4d7bf64c05c3bd45575dabb
     community-service:
       version: a5bfc1091b6eb0e1ae66206cdeebc041f91ea33c
     notification-service:
