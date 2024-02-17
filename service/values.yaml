@@ -10,4 +10,4 @@ postgres:
 env:
 ingress:
   enabled: false
-  paths: []
+  paths:

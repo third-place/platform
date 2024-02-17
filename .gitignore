@@ -6,3 +6,9 @@ charts/
 
 # osx
 .DS_Store
+
+# certs
+tls.crt
+tls.crt.enc
+tls.key
+tls.key.enc
