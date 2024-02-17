@@ -16,11 +16,6 @@ spec:
 
     helm:
       releaseName: {{ $service }}
-      {{- if (ne $parameters nil) }}
-      parameters:
-        {{ $parameters | toYaml | nindent 8 }}
-      {{- end }}
-
 
       # Helm values files for overriding values in the helm chart
       # The path is relative to the spec.source.path directory defined above

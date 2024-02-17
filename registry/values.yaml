@@ -1,2 +1,2 @@
 services:
-parameters:
+environment: none
