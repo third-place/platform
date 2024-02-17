@@ -22,6 +22,15 @@ spec:
       # The path is relative to the spec.source.path directory defined above
       valueFiles:
         - values.yaml
+        {{- if eq $.Values.global.env "dev" }}
+        - values.dev.yaml
+        {{- end }}
+        {{- if eq $.Values.global.env "staging" }}
+        - values.staging.yaml
+        {{- end }}
+        {{- if eq $.Values.global.env "prod" }}
+        - values.prod.yaml
+        {{- end }}
 
       values: |
         {{ $helmValues | nindent 8 }}
