@@ -1,5 +1,4 @@
 {{ $helmValues := .Files.Get "versions.yaml" }}
-{{ $parameters := .Values.parameters }}
 {{ range $service, $def := .Values.services }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
