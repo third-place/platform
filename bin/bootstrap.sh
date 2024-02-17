@@ -1,6 +1,7 @@
 set -e
 
-k3d cluster create -p "9000-9064:9000-9064@loadbalancer" --agents 2
+# this only exposes the web-ui, and not any services
+k3d cluster create -p 9000:80@loadbalancer
 
 helm repo add argocd https://argoproj.github.io/argo-helm
 helm dependency update argocd
