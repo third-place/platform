@@ -1,5 +1,4 @@
 global:
-  environment: none
   versions:
     backstage:
       version: 95a445d067728d99539ef9408ea1a07bf3bb26e2
