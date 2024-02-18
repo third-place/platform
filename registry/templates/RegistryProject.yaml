@@ -22,6 +22,6 @@ spec:
     warn: true
 
   sourceNamespaces:
-    {{- range $service := .Values.services }}
+    {{- range $service, $def := .Values.services }}
     - {{ $service }}
     {{- end }}
