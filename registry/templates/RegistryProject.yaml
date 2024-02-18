@@ -22,4 +22,4 @@ spec:
     warn: true
 
   sourceNamespaces:
-    - {{ .Release.Name }}
+    - '*'
