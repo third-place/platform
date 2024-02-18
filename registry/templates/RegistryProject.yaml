@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: {{ .Release.Name }}
+  namespace: argocd
+spec:
+  sourceRepos:
+    - https://github.com/third-place/platform.git
+    - ghcr.io/third-place
+
+  destinations:
+    - namespace: {{ .Release.Name }}
+      server: https://kubernetes.default.svc
+
+  # Deny all cluster-scoped resources from being created, except for Namespace
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  # Enables namespace orphaned resource monitoring.
+  orphanedResources:
+    warn: true
