@@ -9,14 +9,12 @@ spec:
     - ghcr.io/third-place
 
   destinations:
-    - namespace: {{ .Release.Name }}
-      server: https://kubernetes.default.svc
     - namespace: '*'
       server: https://kubernetes.default.svc
 
   clusterResourceWhitelist:
-    - group: '*'
-      kind: '*'
+    - group: ''
+      kind: Namespace
 
   orphanedResources:
     warn: true
