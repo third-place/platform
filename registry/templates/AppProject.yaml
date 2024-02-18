@@ -1,5 +1,5 @@
 {{ range $service, $def := .Values.services }}
-{{- if (eq $def.hasSubcomponents false) }}
+{{- if not $def.hasSubcomponents }}
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
