@@ -1,10 +1,10 @@
 registry:
   services:
-#    sealed-secrets:
-#      repository: platform
-#      directory: sealed-secrets
-#      ref: main
-#      description: Sealed secrets
+    sealed-secrets:
+      repository: platform
+      directory: sealed-secrets
+      ref: main
+      description: Sealed secrets
 #    kafka:
 #      repository: platform
 #      directory: kafka
