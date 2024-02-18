@@ -20,3 +20,6 @@ spec:
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
     warn: true
+
+  sourceNamespaces:
+    - argocd
