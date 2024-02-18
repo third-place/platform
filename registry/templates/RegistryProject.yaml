@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: {{ .Release.Name }}
-  namespace: argocd
+  namespace: {{ .Release.Name }}
 spec:
   sourceRepos:
     - https://github.com/third-place/platform.git
@@ -20,6 +20,3 @@ spec:
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
     warn: true
-
-  sourceNamespaces:
-    - argocd
