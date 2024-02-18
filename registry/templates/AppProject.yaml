@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: {{ $service }}
-  namespace: {{ $service }}
+  namespace: argocd
 spec:
   description: {{ $def.description }}
 
