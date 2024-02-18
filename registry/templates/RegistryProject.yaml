@@ -20,3 +20,8 @@ spec:
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
     warn: true
+
+  sourceNamespaces:
+    {{- range $service := .Values.services }}
+    - {{ $service }}
+    {{- end }}
