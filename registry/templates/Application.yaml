@@ -1,5 +1,6 @@
 {{ $helmValues := .Files.Get "versions.yaml" }}
 {{ range $service, $def := .Values.services }}
+{{- if (eq $def.hasSubcomponents false) }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -70,4 +71,5 @@ spec:
   # space used to store the history, so we do not recommend increasing it.
   revisionHistoryLimit: 10
 ---
+{{ end }}
 {{ end }}

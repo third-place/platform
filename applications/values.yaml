@@ -30,4 +30,4 @@ registry:
 #      directory: chart
 #      ref: main
 #      description: Web UI
-  directory: system
+  directory: applications
