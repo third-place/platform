@@ -1,20 +1,18 @@
-{{ $helmValues := .Files.Get "versions.yaml" }}
-{{ range $service, $def := .Values.services }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ $service }}
+  name: {{ .Release.Name }}
   namespace: argocd
 spec:
-  project: {{ $service }}
+  project: {{ .Release.Name }}
 
   source:
-    repoURL: https://github.com/third-place/{{ $def.repository }}.git
-    targetRevision: {{ $def.ref }}
-    path: {{ $def.directory }}
+    repoURL: https://github.com/third-place/platform.git
+    targetRevision: main
+    path: {{ .Release.Name }}
 
     helm:
-      releaseName: {{ $service }}
+      releaseName: {{ .Release.Name }}
       ignoreMissingValueFiles: true
 
       valueFiles:
@@ -29,9 +27,6 @@ spec:
         - values.prod.yaml
         {{- end }}
 
-      values: |
-        {{ $helmValues | nindent 8 }}
-
     # kustomize specific config
     kustomize:
 
@@ -42,7 +37,7 @@ spec:
     # or cluster name
     # name: in-cluster
     # The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace
-    namespace: {{ $service }}
+    namespace: {{ .Release.Name }}
 
   # Sync policy
   syncPolicy:
@@ -69,5 +64,3 @@ spec:
   # circumstances. Setting to zero will store no history. This will reduce storage used. Increasing will increase the
   # space used to store the history, so we do not recommend increasing it.
   revisionHistoryLimit: 10
----
-{{ end }}

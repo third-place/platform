@@ -1,5 +1,4 @@
 {{ range $service, $def := .Values.services }}
-{{- if not $def.hasSubcomponents }}
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
@@ -71,5 +70,4 @@ spec:
   orphanedResources:
     warn: true
 ---
-{{ end }}
 {{ end }}

@@ -16,4 +16,3 @@ registry:
       ref: main
       description: Services that make up the application
       hasSubcomponents: true
-  directory: system
