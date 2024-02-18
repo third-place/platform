@@ -17,8 +17,6 @@ spec:
       releaseName: {{ $service }}
       ignoreMissingValueFiles: true
 
-      # Helm values files for overriding values in the helm chart
-      # The path is relative to the spec.source.path directory defined above
       valueFiles:
         - values.yaml
         {{- if eq $.Values.global.env "dev" }}
