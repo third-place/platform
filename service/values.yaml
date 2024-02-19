@@ -2,6 +2,7 @@ port:
 targetPort:
 secrets:
 enabled: true
+serviceType: LoadBalancer
 postgres:
   enabled: false
   auth:

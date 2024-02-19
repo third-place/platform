@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: {{ .Release.Name }}
-  type: ClusterIP
+  type: {{ .Values.serviceType }}
   ports:
     - name: http
       port: {{ .Values.port }}
