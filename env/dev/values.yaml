@@ -17,5 +17,5 @@ registry:
       description: Services that make up the application
       hasSubcomponents: true
 global:
-  env:
-  fqdn:
+  env: dev
+  fqdn: thirdplaceapp.dev

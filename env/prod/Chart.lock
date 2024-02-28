@@ -1,0 +1,6 @@
+dependencies:
+- name: system
+  repository: file://../../system
+  version: 0.0.1
+digest: sha256:96691cfff78879ec96f2871fabe1230a1dc17cc24b6ad01bd998e1bc3600d229
+generated: "2024-02-27T22:43:34.895553-08:00"
