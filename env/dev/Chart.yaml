@@ -1,7 +1,7 @@
 name: dev
 apiVersion: v2
 version: 0.0.1
-dependencies: []
-#  - name: system
-#    version: 0.0.1
-#    repository: file://../../system
+dependencies:
+  - name: system
+    version: 0.0.1
+    repository: file://../../system
