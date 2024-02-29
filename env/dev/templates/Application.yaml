@@ -28,7 +28,7 @@ spec:
         - values.prod.yaml
         {{- end }}
 
-      values:
+      values: |
         {{ $helmValues | nindent 8 }}
 
     # kustomize specific config
