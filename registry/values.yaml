@@ -1,2 +1,5 @@
 services:
 directory:
+global:
+  env:
+  fqdn:

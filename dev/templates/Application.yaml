@@ -20,15 +20,8 @@ spec:
 
       valueFiles:
         - values.yaml
-        {{- if eq $.Values.global.env "dev" }}
-        - values.dev.yaml
-        {{- end }}
-        {{- if eq $.Values.global.env "staging" }}
-        - values.staging.yaml
-        {{- end }}
-        {{- if eq $.Values.global.env "prod" }}
-        - values.prod.yaml
-        {{- end }}
+        - globals.yaml
+        - versions.yaml
 
       values: |
         {{ $allHelmValues | toYaml | nindent 8 }}
