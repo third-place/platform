@@ -1,4 +1,3 @@
-appPath: env/dev
 global:
   env: dev
   fqdn: thirdplaceapp.dev
