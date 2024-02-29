@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/third-place/platform.git
     targetRevision: main
-    path: {{ .Release.Name }}
+    path: {{ .Values.appPath }}
 
     helm:
       releaseName: {{ .Release.Name }}
