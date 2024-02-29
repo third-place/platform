@@ -1,6 +1,6 @@
 name: system
 apiVersion: v2
-version: 0.0.1
+version: 0.0.2
 dependencies:
   - name: registry
     version: 0.0.16
