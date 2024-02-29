@@ -1,4 +1,6 @@
-{{ $helmValues := .Files.Get "globals.yaml" }}
+{{ $globalValues := .Files.Get "globals.yaml" | fromYaml }}
+{{ $versionValues := .Files.Get "versions.yaml" | fromYaml }}
+{{ $allHelmValues := mustMergeOverwrite $globalValues $versionValues }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -29,7 +31,7 @@ spec:
         {{- end }}
 
       values: |
-        {{ $helmValues | nindent 8 }}
+        {{ $allHelmValues | toYaml | nindent 8 }}
 
     # kustomize specific config
     kustomize:
