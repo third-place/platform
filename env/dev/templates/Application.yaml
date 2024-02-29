@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/third-place/platform.git
     targetRevision: main
-    path: env/{{ .Release.Name }}
+    path: env/dev
 
     helm:
       releaseName: {{ .Release.Name }}
