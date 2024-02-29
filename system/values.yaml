@@ -1,4 +1,3 @@
-appPath:
 registry:
   services:
     sealed-secrets:
