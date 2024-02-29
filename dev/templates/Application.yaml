@@ -1,4 +1,4 @@
-{{ $helmValues := .Files.Get "values.yaml" }}
+{{ $helmValues := .Files.Get "globals.yaml" }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
