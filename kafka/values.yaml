@@ -6,3 +6,7 @@ topics:
   - posts
   - post-likes
   - replies
+auto:
+  create:
+    topics:
+      enabled: false
