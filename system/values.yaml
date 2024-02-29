@@ -1,16 +1,16 @@
 appPath:
 registry:
-  services: []
-#    sealed-secrets:
-#      repository: platform
-#      directory: sealed-secrets
-#      ref: main
-#      description: Sealed secrets
-#    kafka:
-#      repository: platform
-#      directory: kafka
-#      ref: main
-#      description: Kafka
+  services:
+    sealed-secrets:
+      repository: platform
+      directory: sealed-secrets
+      ref: main
+      description: Sealed secrets
+    kafka:
+      repository: platform
+      directory: kafka
+      ref: main
+      description: Kafka
 #    applications:
 #      repository: platform
 #      directory: applications
