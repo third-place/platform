@@ -22,7 +22,7 @@ spec:
 
   # Deny all cluster-scoped resources from being created, except for Namespace
   clusterResourceWhitelist:
-    {{- if $def.hasSubcomponents }}
+    {{- if $def.isRegistry }}
     - group: ''
       kind: Namespace
     {{ end }}
