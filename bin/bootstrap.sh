@@ -8,6 +8,5 @@ helm dependency update argocd
 
 helm upgrade --install --namespace argocd --create-namespace -f argocd/values.yaml argocd ./argocd
 
-# helm upgrade --install --namespace dev --create-namespace -f dev/values.yaml dev ./dev
-# helm upgrade --install --namespace system --create-namespace -f system/values.yaml --set global.env=staging system ./system
-# helm upgrade --install --namespace system --create-namespace -f system/values.yaml --set global.env=prod system ./system
+# helm upgrade --install -f env/dev/values.yaml dev ./env/dev
+# helm upgrade --install -f env/prod/values.yaml prod ./env/prod
