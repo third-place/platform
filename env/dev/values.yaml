@@ -5,3 +5,4 @@ registry:
       directory: system
       ref: main
       description: System
+      isRegistry: true

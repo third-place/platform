@@ -12,8 +12,12 @@ spec:
     - ghcr.io/third-place
 
   destinations:
+    - namespace: {{ $service }}
+      server: https://kubernetes.default.svc
+    {{- if $def.isRegistry }}
     - namespace: '*'
       server: https://kubernetes.default.svc
+    {{ end }}
 
   # Deny all cluster-scoped resources from being created, except for Namespace
   clusterResourceWhitelist:
