@@ -1,7 +1,7 @@
-name: system
+name: dev
 apiVersion: v2
 version: 0.0.1
 dependencies:
   - name: registry
     version: 0.0.19
-    repository: file://../registry
+    repository: file://../../registry

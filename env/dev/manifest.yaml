@@ -1,30 +1,73 @@
-{{ $globalValues := .Files.Get "globals.yaml" | fromYaml }}
-{{ $versionValues := .Files.Get "versions.yaml" | fromYaml }}
-{{ $allHelmValues := mustMergeOverwrite $globalValues $versionValues }}
+---
+# Source: dev/charts/registry/templates/Namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: system
+---
+# Source: dev/charts/registry/templates/AppProject.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: system
+  namespace: argocd
+spec:
+  description: System
+
+  sourceRepos:
+    - https://github.com/third-place/platform.git
+    - ghcr.io/third-place
+
+  destinations:
+    - namespace: system
+      server: https://kubernetes.default.svc
+
+  # Deny all cluster-scoped resources from being created, except for Namespace
+  clusterResourceWhitelist:
+
+  # Enables namespace orphaned resource monitoring.
+  orphanedResources:
+    warn: true
+---
+# Source: dev/charts/registry/templates/Application.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Release.Name }}
+  name: system
   namespace: argocd
 spec:
-  project: {{ .Release.Name }}
+  project: system
 
   source:
     repoURL: https://github.com/third-place/platform.git
     targetRevision: main
-    path: {{ .Release.Name }}
+    path: system
 
     helm:
-      releaseName: {{ .Release.Name }}
+      releaseName: system
       ignoreMissingValueFiles: true
 
       valueFiles:
         - values.yaml
-        - globals.yaml
-        - versions.yaml
 
-      values: |
-        {{ $allHelmValues | toYaml | nindent 8 }}
+      valuesObject:
+        
+        global:
+          env: dev
+          fqdn: thirdplaceapp.dev
+          versions:
+            backstage:
+              version: 95a445d067728d99539ef9408ea1a07bf3bb26e2
+            community-service:
+              version: 8b3e3cb94c35f4350179617154d50f3ef46cdf08
+            image-service:
+              version: 3b68e7c300e79a61b217a64bd052a41275f509f5
+            notification-service:
+              version: c9886d81b74764a692bda2f3f05000fa9aef0007
+            user-service:
+              version: 1ad9301a5e89325916ec8aecd309ede4dd4313c1
+            web-ui:
+              version: 592c5e56554824d5f7550229ccebf105e1013f88
 
     # kustomize specific config
     kustomize:
@@ -36,7 +79,7 @@ spec:
     # or cluster name
     # name: in-cluster
     # The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace
-    namespace: {{ .Release.Name }}
+    namespace: system
 
   # Sync policy
   syncPolicy:

@@ -1,0 +1,7 @@
+registry:
+  services:
+    system:
+      repository: platform
+      directory: system
+      ref: main
+      description: System
