@@ -1,10 +1,10 @@
 registry:
   services:
-    system:
+    infra:
       repository: platform
-      directory: system
+      directory: infra
       ref: main
-      description: System
+      description: Platform infrastructure
       isRegistry: true
     applications:
       repository: platform
