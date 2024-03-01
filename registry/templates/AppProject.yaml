@@ -12,10 +12,11 @@ spec:
     - ghcr.io/third-place
 
   destinations:
-    - namespace: {{ $service }}
-      server: https://kubernetes.default.svc
     {{- if $def.isRegistry }}
     - namespace: '*'
+      server: https://kubernetes.default.svc
+    {{ else }}
+    - namespace: {{ $service }}
       server: https://kubernetes.default.svc
     {{ end }}
 
