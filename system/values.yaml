@@ -15,4 +15,3 @@ registry:
 #      directory: applications
 #      ref: main
 #      description: Services that make up the application
-#      hasSubcomponents: true
