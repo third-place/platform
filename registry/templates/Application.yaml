@@ -18,8 +18,6 @@ spec:
 
       valueFiles:
         - values.yaml
-        - values.global.yaml
-        - values.versions.yaml
         {{- if eq $.Values.global.env "dev" }}
         - values.dev.yaml
         {{- end }}
