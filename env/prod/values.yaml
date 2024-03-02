@@ -13,13 +13,13 @@ registry:
       description: Services that make up the application
       isRegistry: true
 global:
-  env: dev
-  fqdn: thirdplaceapp.dev
+  env: prod
+  fqdn: thirdplaceapp.com
   versions:
     backstage:
-      version: 95a445d067728d99539ef9408ea1a07bf3bb26e2
+      version: 96a7db23220bd4850739ead0948d41ffb4bf4387
     user-service:
-      version: 1ad9301a5e89325916ec8aecd309ede4dd4313c1
+      version: 2a3bc325dbb7ce1444bc7078abd04f6d73695ba6
     image-service:
       version: 3b68e7c300e79a61b217a64bd052a41275f509f5
     community-service:
@@ -27,4 +27,4 @@ global:
     notification-service:
       version: c9886d81b74764a692bda2f3f05000fa9aef0007
     web-ui:
-      version: 592c5e56554824d5f7550229ccebf105e1013f88
+      version: b694282977269d7cb1bd088e133035078ac57cde
