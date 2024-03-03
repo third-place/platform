@@ -12,3 +12,5 @@ env:
 ingress:
   enabled: false
   paths:
+externalDns:
+  enabled: true
