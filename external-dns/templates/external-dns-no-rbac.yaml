@@ -28,7 +28,7 @@ spec:
             - --txt-owner-id={{ .Values.hostedZoneId }}
           env:
             - name: AWS_DEFAULT_REGION
-              value: {{ awsRegion }}
+              value: {{ .Values.awsRegion }}
             - name: AWS_SHARED_CREDENTIALS_FILE
               value: /.aws/credentials
           volumeMounts:
