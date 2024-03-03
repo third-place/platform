@@ -1,3 +1,5 @@
+{{ $versionValues := .Files.Get "versions.yaml" | fromYaml }}
+{{ $allHelmValues := mustMergeOverwrite .Values.global $versionValues }}
 {{ range $service, $def := .Values.services }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -30,7 +32,7 @@ spec:
 
       valuesObject:
         global:
-          {{ $.Values.global | toYaml | nindent 10 }}
+          {{ $allHelmValues | toYaml | nindent 10 }}
 
     # kustomize specific config
     kustomize:
