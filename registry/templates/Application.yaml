@@ -1,4 +1,5 @@
-{{ $versionValues := .Files.Get "versions.yaml" | fromYaml }}
+{{ $filename := printf "versions.%s.yaml" .Values.global.env }}
+{{ $versionValues := .Files.Get $filename | fromYaml }}
 {{ $allHelmValues := mustMergeOverwrite .Values.global $versionValues }}
 {{ range $service, $def := .Values.services }}
 apiVersion: argoproj.io/v1alpha1
