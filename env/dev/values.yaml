@@ -14,7 +14,7 @@ registry:
       isRegistry: true
 global:
   env: dev
-  fqdn: thirdplaceapp.dev
+  fqdn: ruinsofmidgaard.com
   versions:
     backstage:
       version: 96a7db23220bd4850739ead0948d41ffb4bf4387
