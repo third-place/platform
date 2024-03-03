@@ -66,6 +66,12 @@ spec:
     - group: '*'
       kind: ValidatingWebhookConfiguration
     {{- end }}
+    {{- if (eq $service "external-dns") }}
+    - group: '*'
+      kind: ClusterRole
+    - group: '*'
+      kind: ClusterRoleBinding
+    {{- end }}
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
