@@ -13,4 +13,4 @@ ingress:
   enabled: false
   paths:
 externalDns:
-  enabled: true
+  enabled: false
