@@ -10,8 +10,3 @@ registry:
       directory: kafka
       ref: main
       description: Kafka
-    external-dns:
-      repository: platform
-      directory: external-dns
-      ref: main
-      description: External DNS
