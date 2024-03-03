@@ -1,6 +1,9 @@
 # helm
 charts/
 
+# secrets
+ignored/
+
 # jetbrains
 .idea/
 
