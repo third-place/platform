@@ -21,7 +21,7 @@ spec:
           args:
             - --source=service
             - --source=ingress
-            - --domain-filter={{ .Values.domain }}
+            - --domain-filter={{ .Values.global.fqdn }}
             - --provider=aws
             - --aws-zone-type=public
             - --registry=txt
