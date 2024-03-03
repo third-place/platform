@@ -1,6 +1,6 @@
 dependencies:
 - name: registry
   repository: file://../registry
-  version: 0.0.23
-digest: sha256:15b78ee6642cddd2e39224eff70b4ad4e34178c6a89e6927afc1c3227bd5c7dd
-generated: "2024-03-03T08:43:16.407821-08:00"
+  version: 0.0.24
+digest: sha256:db2d96e93fea9b45841428c2245a8930c4e21aff7ea3d532001c7cda67a780a1
+generated: "2024-03-03T08:46:17.25443-08:00"

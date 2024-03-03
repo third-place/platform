@@ -3,5 +3,5 @@ apiVersion: v2
 version: 0.0.1
 dependencies:
   - name: registry
-    version: 0.0.23
+    version: 0.0.24
     repository: file://../registry
