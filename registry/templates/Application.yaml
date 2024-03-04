@@ -29,7 +29,7 @@ spec:
         {{- end }}
 
       valuesObject:
-        {{ .Values.global | toYaml | nindent 10 }}
+        {{ $.Values.global | toYaml | nindent 10 }}
 
     # kustomize specific config
     kustomize:
