@@ -11,3 +11,7 @@ versions:
     version: c9886d81b74764a692bda2f3f05000fa9aef0007
   web-ui:
     version: 2c31625255fa8016cbb9cb67c8c80f2c34cbed78
+global:
+  versions:
+    web-ui:
+      version: c1214c0c42194ef3df8f20f92da4200d2a6ec6fa
