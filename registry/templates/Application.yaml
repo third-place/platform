@@ -1,6 +1,3 @@
-{{ $filename := printf "versions.%s.yaml" .Values.global.env }}
-{{ $versionValues := .Files.Get $filename | fromYaml }}
-{{ $allHelmValues := mustMergeOverwrite .Values.global $versionValues }}
 {{ range $service, $def := .Values.services }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -32,8 +29,7 @@ spec:
         {{- end }}
 
       valuesObject:
-        global:
-          {{ $allHelmValues | toYaml | nindent 10 }}
+        {{ .Values.global | toYaml | nindent 10 }}
 
     # kustomize specific config
     kustomize:
