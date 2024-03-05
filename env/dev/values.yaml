@@ -27,4 +27,4 @@ global:
     notification-service:
       version: c9886d81b74764a692bda2f3f05000fa9aef0007
     web-ui:
-      version: 74947188f0a3876fbd535a4ac652ec871284444b
+      version: 4fb6fe8268b318962aca68d1302cbaa2e22f7051
