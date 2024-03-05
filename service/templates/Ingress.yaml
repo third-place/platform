@@ -1,6 +1,7 @@
 {{ $releaseName := .Release.Name }}
 {{ $port := .Values.port }}
 {{ $paths := .Values.ingress.paths }}
+{{ $host := printf "%s.%s" .Values.subdomain .Values.global.fqdn }}
 {{- if .Values.ingress.enabled }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -10,7 +11,8 @@ metadata:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    - http:
+    - host: {{ $host }}
+      http:
         paths:
           {{- range $path := $paths }}
           - path: {{ $path }}
