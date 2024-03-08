@@ -4,6 +4,7 @@ on:
       env:
         type: string
         required: true
+        description: the environment to use
 jobs:
   upgrade-helm:
     runs-on: ubuntu-latest
