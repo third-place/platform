@@ -11,6 +11,7 @@ postgres:
 env:
 ingress:
   enabled: false
+  host:
   paths:
 externalDns:
   enabled: false
