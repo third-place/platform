@@ -76,7 +76,7 @@ spec:
     - group: '*'
       kind: ClusterIssuer
     {{- end }}
-    {{- if (eq $service "cert-manager") }}
+    {{- if (eq $service "infra") }}
     - group: '*'
       kind: ValidatingWebhookConfiguration
     - group: '*'
