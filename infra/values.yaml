@@ -10,3 +10,8 @@ registry:
       directory: kafka
       ref: main
       description: Kafka
+    cert-manager:
+      repository: platform
+      directory: cert-manager
+      ref: main
+      description: Cert manager
