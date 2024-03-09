@@ -1,2 +1,4 @@
 enabled: true
 selfSigned: false
+cert-manager:
+  namespace: cert-manager
