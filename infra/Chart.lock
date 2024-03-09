@@ -2,8 +2,5 @@ dependencies:
 - name: registry
   repository: file://../registry
   version: 0.0.26
-- name: cert-manager
-  repository: https://charts.jetstack.io
-  version: v1.14.4
-digest: sha256:76d3fb065b07ac1f3d368e52e2f38298297b0ad9267343ce6d35b70c062db88d
-generated: "2024-03-08T21:42:45.133407-08:00"
+digest: sha256:391195fadcbad84b12535356233760f59de95ecfa3922db5e64223c52c40a7d0
+generated: "2024-03-08T21:48:34.304482-08:00"
