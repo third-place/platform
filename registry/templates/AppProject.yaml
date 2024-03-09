@@ -87,8 +87,6 @@ spec:
       kind: ClusterRoleBinding
     - group: '*'
       kind: CustomResourceDefinition
-    - group: '*'
-      kind: Namespace
     {{- end }}
 
   # Enables namespace orphaned resource monitoring.
