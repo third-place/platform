@@ -72,9 +72,25 @@ spec:
     - group: '*'
       kind: ClusterRoleBinding
     {{- end }}
-    {{- if (eq $service "cert-manager") }}
+    {{- if (eq $service "cluster-issuer") }}
     - group: '*'
       kind: ClusterIssuer
+    {{- end }}
+    {{- if (eq $service "cert-manager") }}
+    - group: '*'
+      kind: ValidatingWebhookConfiguration
+    - group: '*'
+      kind: MutatingWebhookConfiguration
+    - group: '*'
+      kind: Role
+    - group: '*'
+      kind: RoleBinding
+    - group: '*'
+      kind: ClusterRole
+    - group: '*'
+      kind: ClusterRoleBinding
+    - group: '*'
+      kind: CustomResourceDefinition
     {{- end }}
 
   # Enables namespace orphaned resource monitoring.
