@@ -26,6 +26,6 @@ spec:
           {{- end }}
   tls:
     - hosts:
-      - {{ $host }}
+      - {{ default $host .Values.ingress.host }}
       secretName: thirdplace-letsencrypt-{{ .Values.global.env }}
 {{- end }}
