@@ -9,6 +9,7 @@ metadata:
   name: {{ $releaseName }}-ingress
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
+    cert-manager.io/cluster-issuer: thirdplace-letsencrypt-{{ .Values.global.env }}
 spec:
   rules:
     - host: {{ default $host .Values.ingress.host }}
@@ -23,4 +24,8 @@ spec:
                 port:
                   number: {{ $port }}
           {{- end }}
+  tls:
+    - hosts:
+      - {{ $host }}
+      secretName: thirdplace-letsencrypt-{{ .Values.global.env }}
 {{- end }}
