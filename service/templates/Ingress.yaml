@@ -9,6 +9,7 @@ metadata:
   name: {{ $releaseName }}-ingress
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
+    spec.ingressClassName: traefik
     cert-manager.io/cluster-issuer: thirdplace-letsencrypt-{{ .Values.global.env }}
 spec:
   rules:
