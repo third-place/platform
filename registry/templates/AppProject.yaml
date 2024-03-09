@@ -74,20 +74,6 @@ spec:
     {{- end }}
     {{- if (eq $service "cert-manager") }}
     - group: '*'
-      kind: ValidatingWebhookConfiguration
-    - group: '*'
-      kind: MutatingWebhookConfiguration
-    - group: '*'
-      kind: Role
-    - group: '*'
-      kind: RoleBinding
-    - group: '*'
-      kind: ClusterRole
-    - group: '*'
-      kind: ClusterRoleBinding
-    - group: '*'
-      kind: CustomResourceDefinition
-    - group: '*'
       kind: ClusterIssuer
     {{- end }}
 

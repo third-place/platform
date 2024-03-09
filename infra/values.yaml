@@ -10,8 +10,8 @@ registry:
       directory: kafka
       ref: main
       description: Kafka
-    cert-manager:
+    cluster-issuer:
       repository: platform
-      directory: cert-manager
+      directory: cluster-issuer
       ref: main
-      description: Cert manager
+      description: Cluster issuer
