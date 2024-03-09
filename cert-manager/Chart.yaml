@@ -1,0 +1,8 @@
+name: cluster-issuer
+apiVersion: v2
+version: 0.0.1
+type: application
+dependencies:
+  - name: cert-manager
+    version: 1.14.4
+    repository: https://charts.jetstack.io

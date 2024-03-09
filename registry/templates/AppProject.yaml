@@ -72,11 +72,9 @@ spec:
     - group: '*'
       kind: ClusterRoleBinding
     {{- end }}
-    {{- if (eq $service "cluster-issuer") }}
+    {{- if (eq $service "cert-manager") }}
     - group: '*'
       kind: ClusterIssuer
-    {{- end }}
-    {{- if (eq $service "infra") }}
     - group: '*'
       kind: ValidatingWebhookConfiguration
     - group: '*'
