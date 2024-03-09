@@ -11,7 +11,7 @@ metadata:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    - host: {{ default $.Values.ingress.host $host }}
+    - host: {{ default $host .Values.ingress.host }}
       http:
         paths:
           {{- range $path := $paths }}
