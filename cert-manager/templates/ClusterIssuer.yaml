@@ -11,8 +11,7 @@ spec:
     privateKeySecretRef:
       name: thirdplace-letsencrypt-{{ .Values.global.env }}
     solvers:
-      - selector: {}
-        http01:
+      - http01:
           ingress:
-            class: traefik
+            ingressClassName: traefik
 {{ end }}
