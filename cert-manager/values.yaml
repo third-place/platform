@@ -1,2 +1,2 @@
-enable: false
-selfSigned: false
+enableClusterIssuer: false
+enableSelfSigned: false
