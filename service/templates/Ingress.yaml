@@ -9,8 +9,8 @@ metadata:
   name: {{ $releaseName }}-ingress
   annotations:
     cert-manager.io/cluster-issuer: thirdplace-letsencrypt-{{ .Values.global.env }}
+    kubernetes.io/ingress.class: traefik
 spec:
-  ingressClassName: traefik
   rules:
     - host: {{ default $host .Values.ingress.host }}
       http:
