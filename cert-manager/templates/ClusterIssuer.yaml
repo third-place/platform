@@ -14,5 +14,5 @@ spec:
       - selector: {}
         http01:
           ingress:
-            ingressClassName: traefik
+            class: traefik
 {{ end }}
