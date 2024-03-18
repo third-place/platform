@@ -1,3 +1,4 @@
 clusterIssuer:
   enable: true
+  staging: true
   selfSigned: false
