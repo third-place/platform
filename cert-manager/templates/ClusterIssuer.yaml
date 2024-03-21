@@ -6,17 +6,21 @@ metadata:
   namespace: cert-manager
 spec:
   acme:
-    {{- if .Values.clusterIssuer.staging }}
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
-    {{- else }}
-    server: https://acme-v02.api.letsencrypt.org/directory
-    {{- end }}
-    email: dan@danmunro.com
     privateKeySecretRef:
       name: thirdplace-letsencrypt-{{ .Values.global.env }}
     solvers:
-      - selector: {}
-        http01:
-          ingress:
-            class: traefik
+      - selector:
+          dnsZones:
+            - {{ .Values.clusterIssuer.host }}
+        dns01:
+          route53:
+            region: {{ .Values.clusterIssuer.aws.region }}
+            hostedZoneID: {{ .Values.clusterIssuer.aws.hostedZoneID }}
+            role: {{ .Values.clusterIssuer.aws.role }}
+            accessKeyIDSecretRef:
+              name: aws-access-key-id
+              key: secretValue
+            secretAccessKeySecretRef:
+              name: aws-secret-access-key
+              key: secretValue
 {{ end }}
