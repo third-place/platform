@@ -1,0 +1,3 @@
+clusterIssuer:
+  selfSigned: true
+  host: thirdplaceappdev.com
