@@ -1,5 +1,6 @@
 port:
 targetPort:
+nodePort:
 secrets:
 enabled: true
 serviceType: LoadBalancer

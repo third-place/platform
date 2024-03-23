@@ -16,4 +16,5 @@ spec:
       port: {{ .Values.port }}
       protocol: TCP
       targetPort: {{ .Values.targetPort }}
+      nodePort: {{ .Values.nodePort }}
 {{- end }}
