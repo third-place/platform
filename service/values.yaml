@@ -17,7 +17,3 @@ ingress:
 externalDns:
   enabled: false
 nfsVolumes:
-  - name: images
-    server: 192.168.254.30
-    path: /k8s/images
-    mountPath: /var/images
