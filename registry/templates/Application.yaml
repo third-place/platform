@@ -28,7 +28,7 @@ spec:
         - values.prod.yaml
         {{- end }}
 
-      valuesObject:
+      values: |
         global:
           {{ $.Values.global | toYaml | nindent 10 }}
 
