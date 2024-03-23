@@ -3,7 +3,7 @@ targetPort:
 nodePort:
 secrets:
 enabled: true
-serviceType: LoadBalancer
+serviceType: NodePort
 postgres:
   enabled: false
   auth:
