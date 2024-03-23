@@ -29,6 +29,13 @@ spec:
             - containerPort: {{ .Values.targetPort }}
               name: http
               protocol: TCP
+          {{- if .Values.nfsVolumes }}
+          volumeMounts:
+            {{- range $vol := .Values.nfsVolumes }}
+            - name: {{ $vol.name }}
+              mountPath: {{ $vol.mountPath }}
+            {{- end }}
+          {{- end }}
           env:
             - name: SERVICE_PORT
               value: {{ quote .Values.targetPort }}
@@ -47,4 +54,13 @@ spec:
               value: {{ quote $value }}
             {{- end }}
             {{- end }}
+      {{- if .Values.nfsVolumes }}
+      volumes:
+        {{- range $vol := .Values.nfsVolumes }}
+        - name: {{ $vol.name }}
+          nfs:
+            server: {{ $vol.server }}
+            path: {{ $vol.path }}
+        {{- end }}
+      {{- end }}
 {{ end }}
