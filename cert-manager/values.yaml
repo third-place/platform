@@ -1,6 +1,6 @@
 clusterIssuer:
   enable: true
-  staging: true
+  staging: false
   host: thirdplaceappdev.com
   aws:
     region: us-west-2
