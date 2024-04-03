@@ -101,6 +101,10 @@ spec:
       kind: ValidatingWebhookConfiguration
     - group: '*'
       kind: MutatingWebhookConfiguration
+    - group: '*'
+      kind: ClusterRole
+    - group: '*'
+      kind: ClusterRoleBinding
     {{- end }}
 
   # Enables namespace orphaned resource monitoring.
