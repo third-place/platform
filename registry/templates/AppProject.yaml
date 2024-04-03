@@ -105,6 +105,8 @@ spec:
       kind: ClusterRole
     - group: '*'
       kind: ClusterRoleBinding
+    - group: '*'
+      kind: ConstraintTemplate
     {{- end }}
 
   # Enables namespace orphaned resource monitoring.
