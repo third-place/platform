@@ -94,6 +94,14 @@ spec:
     - group: '*'
       kind: CustomResourceDefinition
     {{- end }}
+    {{- if (eq $service "gatekeeper") }}
+    - group: '*'
+      kind: CustomResourceDefinition
+    - group: '*'
+      kind: ValidatingWebhookConfiguration
+    - group: '*'
+      kind: MutatingWebhookConfiguration
+    {{- end }}
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
