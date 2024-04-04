@@ -17,3 +17,10 @@ ingress:
 externalDns:
   enabled: false
 nfsVolumes:
+resources:
+  requests:
+    memory:
+    cpu:
+  limits:
+    memory:
+    cpu: 

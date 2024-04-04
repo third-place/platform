@@ -24,6 +24,8 @@ spec:
       containers:
         - name: {{ .Release.Name }}
           image: ghcr.io/third-place/{{ $name }}:{{ $serviceVersion }}
+          resources:
+            {{ toYaml $.Values.resources | nindent 11 }}
           imagePullPolicy: Always
           ports:
             - containerPort: {{ .Values.targetPort }}
