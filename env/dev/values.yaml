@@ -21,7 +21,7 @@ global:
     user-service:
       version: 2095817cb1ba08368c244efcf28e47907d8436cc
     image-service:
-      version: aed5345d538d7f7576e6bbd18976fcea1f899055
+      version: c3d82540cfe4e8233ec7fbee489990770d12ff6c
     community-service:
       version: 7b306feb8a43a4508169cac474a1b4b20a5a7a1d
     notification-service:
