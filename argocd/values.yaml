@@ -14,5 +14,7 @@ applicationSet:
   replicas: 2
 
 global:
+  service:
+    type: NodePort
   ingress:
     enabled: true
