@@ -1,20 +1,13 @@
-redis-ha:
-  enabled: true
+argo-cd:
+  configs:
+    params:
+      server.insecure: true
 
-controller:
-  replicas: 1
-
-server:
-  replicas: 2
-
-repoServer:
-  replicas: 2
-
-applicationSet:
-  replicas: 2
-
-global:
-  service:
-    type: NodePort
-  ingress:
-    enabled: true
+  server:
+    ingress:
+      enabled: true
+      ingressClassName: traefik
+      annotations:
+        nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+        nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+      tls: true

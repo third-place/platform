@@ -1,0 +1,6 @@
+argo-cd:
+  server:
+    ingress:
+      hostname: argo.thirdplaceappdev.com
+      annotations:
+        cert-manager.io/cluster-issuer: thirdplace-letsencrypt-dev
