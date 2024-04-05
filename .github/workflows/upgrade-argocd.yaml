@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - argocd/**
+jobs:
+  publish-service-chart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./bin/upgrade-argo.sh dev
