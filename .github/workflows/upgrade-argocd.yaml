@@ -9,4 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: ./bin/upgrade-argo.sh dev
+      - uses: azure/setup-helm@v4.1.0
+      - uses: WyriHaximus/github-action-helm3@v3
+        with:
+          exec: helm dependency build argocd
+          kubeconfig: '${{ secrets.KUBE_CONFIG }}'
+          overrule_existing_kubeconfig: "true"
+      - uses: WyriHaximus/github-action-helm3@v3
+        with:
+          exec: helm upgrade --install --namespace argocd -f ./argocd/values.yaml -f ./argocd/values.dev.yaml argocd ./argocd
+          kubeconfig: '${{ secrets.KUBE_CONFIG }}'
+          overrule_existing_kubeconfig: "true"
