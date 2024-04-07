@@ -25,6 +25,6 @@ global:
     community-service:
       version: d8235f4f1230d85e1a13492aafb7b31a61dd6ce0
     notification-service:
-      version: 38d3fadabe7b57c79cac6b6c1a5ef01153a74b61
+      version: d9a61219c8e243082355d8db402fd5a34da5c5ec
     web-ui:
       version: 5a2f1ae883c2e04133b5c492fc4532ad5891d105
