@@ -113,6 +113,8 @@ spec:
       kind: K8sContainerLimits
     - group: 'constraints.gatekeeper.sh'
       kind: K8sHorizontalPodAutoscaler
+    - group: 'constraints.gatekeeper.sh'
+      kind: K8sPodDisruptionBudget
     {{- end }}
 
   # Enables namespace orphaned resource monitoring.
