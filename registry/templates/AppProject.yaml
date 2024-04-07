@@ -107,8 +107,8 @@ spec:
       kind: ClusterRoleBinding
     - group: '*'
       kind: ConstraintTemplate
-    - group: '*'
-      kind: constraints.gatekeeper.sh:K8sContainerRequests
+    - group: 'constraints.gatekeeper.sh'
+      kind: K8sContainerRequests
     {{- end }}
 
   # Enables namespace orphaned resource monitoring.
