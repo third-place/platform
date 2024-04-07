@@ -109,6 +109,8 @@ spec:
       kind: ConstraintTemplate
     - group: 'constraints.gatekeeper.sh'
       kind: K8sContainerRequests
+    - group: 'constraints.gatekeeper.sh'
+      kind: K8sContainerLimits
     {{- end }}
 
   # Enables namespace orphaned resource monitoring.
