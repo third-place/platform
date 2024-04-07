@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: nginx-hpa-allowed
+  name: hpa
   namespace: {{ .Release.Name }}
 spec:
   minReplicas: {{ .Values.hpa.minReplicas }}
