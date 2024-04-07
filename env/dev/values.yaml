@@ -17,7 +17,7 @@ global:
   fqdn: thirdplaceappdev.com
   versions:
     backstage:
-      version: 51960cc90410e989033006459c6bf4744bac7599
+      version: 1a4c8edfa7cf275b93108e70f554ddce2a8d1e8e
     user-service:
       version: 48d6ab557aae7bd3c2a404e05fec7c276278b1ea
     image-service:
