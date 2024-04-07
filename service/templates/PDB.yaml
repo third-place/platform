@@ -1,7 +1,7 @@
 apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
-  name: nginx-pdb-allowed
+  name: {{ .Release.Name }}-pdb-allowed
 spec:
   maxUnavailable: 1
   selector:
