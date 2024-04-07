@@ -23,4 +23,7 @@ resources:
     cpu:
   limits:
     memory:
-    cpu: 
+    cpu:
+hpa:
+  minReplicas: 2
+  maxReplicas: 6
