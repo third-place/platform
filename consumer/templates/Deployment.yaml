@@ -1,6 +1,6 @@
 {{ if .Values.enabled }}
 {{ $serviceVersion := "0.0.0" }}
-{{ $name := .Release.Name }}
+{{ $name := .Release.Name }}-consumer
 {{ $secrets := .Values.secrets }}
 {{ $env := .Values.env }}
 {{ range $service, $version := .Values.global.versions }}
