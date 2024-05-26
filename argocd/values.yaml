@@ -11,4 +11,11 @@ argo-cd:
         nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
         nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
       tls: true
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+      cpu: 250m
+      memory: 256Mi
 
