@@ -21,7 +21,7 @@ global:
     user-service:
       version: 60337e4fb939a0d746082005152d3910540a95d0
     user-service-consumer:
-      version: 60337e4fb939a0d746082005152d3910540a95d0
+      version: cb7a78f2e6c5970d24b4a14aac76a874727fcccd
     image-service:
       version: a4728f4cd42255fb3b3d6e05530c4d10f28816b0
     community-service:
