@@ -20,6 +20,8 @@ global:
       version: 0413d5edc20ec1102284d66570f322c11e71a115
     user-service:
       version: 48d6ab557aae7bd3c2a404e05fec7c276278b1ea
+    user-service-consumer:
+      version:
     image-service:
       version: a4728f4cd42255fb3b3d6e05530c4d10f28816b0
     community-service:
