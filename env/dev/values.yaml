@@ -21,7 +21,7 @@ global:
     user-service:
       version: 48d6ab557aae7bd3c2a404e05fec7c276278b1ea
     user-service-consumer:
-      version:
+      version: 60337e4fb939a0d746082005152d3910540a95d0
     image-service:
       version: a4728f4cd42255fb3b3d6e05530c4d10f28816b0
     community-service:
