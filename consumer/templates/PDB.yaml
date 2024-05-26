@@ -1,9 +1,10 @@
+{{ $name := include "name" . }}
 apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
-  name: {{ .Release.Name }}-pdb-allowed
+  name: {{ $name }}-pdb-allowed
 spec:
   maxUnavailable: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}
+      app: {{ $name }}
