@@ -6,7 +6,7 @@ on:
       - consumer/**
   workflow_dispatch:
 jobs:
-  publish-service-chart:
+  publish-consumer-chart:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
