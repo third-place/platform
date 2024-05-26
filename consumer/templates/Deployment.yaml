@@ -1,0 +1,62 @@
+{{ if .Values.enabled }}
+{{ $serviceVersion := "0.0.0" }}
+{{ $name := .Release.Name }}
+{{ $secrets := .Values.secrets }}
+{{ $env := .Values.env }}
+{{ range $service, $version := .Values.global.versions }}
+{{ if eq $name $service }}
+{{ $serviceVersion = $version.version }}
+{{ end }}
+{{ end }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Release.Name }}
+          image: ghcr.io/third-place/{{ $name }}:{{ $serviceVersion }}
+          resources:
+            {{ toYaml $.Values.resources | nindent 11 }}
+          imagePullPolicy: Always
+          {{- if .Values.nfsVolumes }}
+          volumeMounts:
+            {{- range $vol := .Values.nfsVolumes }}
+            - name: {{ $vol.name }}
+              mountPath: {{ $vol.mountPath }}
+            {{- end }}
+          {{- end }}
+          env:
+            {{- if $secrets }}
+            {{- range $key, $_ := $secrets }}
+            - name: {{ $key }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ kebabcase $key }}
+                  key: secretValue
+            {{- end }}
+            {{- end }}
+            {{- if $env }}
+            {{- range $key, $value := $env }}
+            - name: {{ $key }}
+              value: {{ quote $value }}
+            {{- end }}
+            {{- end }}
+      {{- if .Values.nfsVolumes }}
+      volumes:
+        {{- range $vol := .Values.nfsVolumes }}
+        - name: {{ $vol.name }}
+          nfs:
+            server: {{ $vol.server }}
+            path: {{ $vol.path }}
+        {{- end }}
+      {{- end }}
+{{ end }}
