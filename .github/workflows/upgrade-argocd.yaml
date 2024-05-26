@@ -4,6 +4,7 @@ on:
       - main
     paths:
       - argocd/**
+  workflow_dispatch:
 jobs:
   upgrade-argocd:
     runs-on: ubuntu-latest

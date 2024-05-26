@@ -4,6 +4,7 @@ on:
       - main
     paths:
       - postgres/**
+  workflow_dispatch:
 jobs:
   publish-postgres-chart:
     runs-on: ubuntu-latest

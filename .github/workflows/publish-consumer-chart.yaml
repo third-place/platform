@@ -3,7 +3,7 @@ on:
     branches:
       - main
     paths:
-      - service/**
+      - consumer/**
   workflow_dispatch:
 jobs:
   publish-service-chart:
@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo ${{ secrets.HELM_REPO_TOKEN }} | helm registry login ghcr.io -u ${{ secrets.HELM_CHART_USER }} --password-stdin
-      - run: helm dependency update service/
-      - run: helm package service/
+      - run: helm dependency update consumer/
+      - run: helm package consumer/
       - run: helm push *.tgz oci://ghcr.io/third-place
