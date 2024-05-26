@@ -11,18 +11,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ $name }}
 spec:
   selector:
     matchLabels:
-      app: {{ .Release.Name }}
+      app: {{ $name }}
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}
+        app: {{ $name }}
     spec:
       containers:
-        - name: {{ .Release.Name }}
+        - name: {{ $name }}
           image: ghcr.io/third-place/{{ $name }}:{{ $serviceVersion }}
           resources:
             {{ toYaml $.Values.resources | nindent 11 }}
