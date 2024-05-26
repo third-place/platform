@@ -1,3 +1,3 @@
 {{- define "name" }}
-{{ printf "%s-%s" .Release.Name "-consumer" }}
+{{ printf "%s-%s" .Release.Name "consumer" }}
 {{ end -}}
