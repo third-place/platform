@@ -4,6 +4,8 @@ nodePort:
 secrets:
 enabled: true
 serviceType: NodePort
+consumer:
+  enabled: false
 postgres:
   enabled: false
   auth:
