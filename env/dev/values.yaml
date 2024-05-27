@@ -29,7 +29,7 @@ global:
     community-service:
       version: 5357c293096e754000544b2a07bc0fc7bae49211
     community-service-consumer:
-      version:
+      version: 5357c293096e754000544b2a07bc0fc7bae49211
     notification-service:
       version: a6451f573ea069baa7ee66301fd7e0439a106ea3
     notification-service-consumer:
