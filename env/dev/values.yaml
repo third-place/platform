@@ -24,9 +24,15 @@ global:
       version: 01a36ec38525815fa03c6bbe33f331c7114d29f8
     image-service:
       version: a4728f4cd42255fb3b3d6e05530c4d10f28816b0
+    image-service-consumer:
+      version:
     community-service:
       version: 6a4e67936aad7cc63aa5bddc62f8741d3d4fd643
+    community-service-consumer:
+      version:
     notification-service:
       version: d9a61219c8e243082355d8db402fd5a34da5c5ec
+    notification-service-consumer:
+      version:
     web-ui:
       version: 713996a7d7c3666c531f4440f727a004a320740c
