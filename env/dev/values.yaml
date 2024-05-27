@@ -25,7 +25,7 @@ global:
     image-service:
       version: 766601656bc142198b8656b087c84f9b7f0c6329
     image-service-consumer:
-      version: 64929595a07ce4e554758328b52df3cdaf055201
+      version: 766601656bc142198b8656b087c84f9b7f0c6329
     community-service:
       version: 6a4e67936aad7cc63aa5bddc62f8741d3d4fd643
     community-service-consumer:
