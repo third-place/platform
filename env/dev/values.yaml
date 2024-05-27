@@ -33,6 +33,6 @@ global:
     notification-service:
       version: d9a61219c8e243082355d8db402fd5a34da5c5ec
     notification-service-consumer:
-      version:
+      version: a6451f573ea069baa7ee66301fd7e0439a106ea3
     web-ui:
       version: 713996a7d7c3666c531f4440f727a004a320740c
