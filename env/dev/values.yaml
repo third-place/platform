@@ -27,7 +27,7 @@ global:
     image-service-consumer:
       version: c43e28030e1a85a88bda76adb73af70719670212
     community-service:
-      version: 6a4e67936aad7cc63aa5bddc62f8741d3d4fd643
+      version: 5357c293096e754000544b2a07bc0fc7bae49211
     community-service-consumer:
       version:
     notification-service:
