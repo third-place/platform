@@ -31,7 +31,7 @@ global:
     community-service-consumer:
       version: 5357c293096e754000544b2a07bc0fc7bae49211
     notification-service:
-      version: a6451f573ea069baa7ee66301fd7e0439a106ea3
+      version: 15ae7761ee83aa307ce611b23e16472df3c45441
     notification-service-consumer:
       version: 15ae7761ee83aa307ce611b23e16472df3c45441
     web-ui:
