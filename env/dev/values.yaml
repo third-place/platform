@@ -21,7 +21,7 @@ global:
     user-service:
       version: cb7a78f2e6c5970d24b4a14aac76a874727fcccd
     user-service-consumer:
-      version: cb7a78f2e6c5970d24b4a14aac76a874727fcccd
+      version: 2967e0d6de80d783a05a0f25368a5cbcd768d180
     image-service:
       version: a4728f4cd42255fb3b3d6e05530c4d10f28816b0
     community-service:
