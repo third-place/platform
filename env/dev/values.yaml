@@ -35,4 +35,4 @@ global:
     notification-service-consumer:
       version: 15ae7761ee83aa307ce611b23e16472df3c45441
     web-ui:
-      version: 713996a7d7c3666c531f4440f727a004a320740c
+      version: 479b6878d29ee7697bffea698554249d1c3cc278
