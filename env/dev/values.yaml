@@ -19,7 +19,7 @@ global:
     backstage:
       version: 0413d5edc20ec1102284d66570f322c11e71a115
     user-service:
-      version: ef7c877d118fa095b1c8a6ba199c91e32b6f26df
+      version: 758004232faa3448af0960a89d7909173625458e
     user-service-consumer:
       version: 758004232faa3448af0960a89d7909173625458e
     image-service:
